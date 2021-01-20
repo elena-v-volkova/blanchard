@@ -1,0 +1,134 @@
+:root {
+    --white: rgba(255, 255, 255, 1);
+    --violet: rgba(157, 92, 208, 1);
+
+   }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: normal;
+    font-size: 16px;
+}
+.container {
+    width: 1380px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+li {
+    list-style-type: none;
+}
+.btn {
+    border: 2px solid var(--violet);
+    border-radius: 100px;
+}
+
+/* Header */
+.header {
+    position: relative;
+}
+
+.header_top {
+    background-color: black;
+    padding: 30px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.menu_top-nav-list {
+    display: flex;
+}
+
+.menu_top-nav__item:not(:last-child) {
+    margin-right: 61px;
+}
+
+.menu_top-nav__link {
+    color: white;
+}
+
+.login {
+    align-self: center;
+}
+
+.login__link {
+    padding-left: 30px;
+    background: url(/img/login.svg);
+    background-repeat: no-repeat;
+}
+
+.header_bottom {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
+}
+
+.menu_bottom-nav-list {
+    display: flex;
+    margin: 23px 0;
+}
+
+.menu_bottom-nav__link {
+    background: url(/img/dropdown.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 15px;
+}
+
+.menu_bottom-nav__item:not(:last-child) {
+    margin-right: 96px;
+}
+
+.header-search-form {
+    margin: 23px 0;
+    background: url(/img/search.svg);
+    background-repeat: no-repeat;
+}
+
+.search-form__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    margin-left: 30px;
+}
+
+.search-form__input::placeholder {
+    color: white;
+}
+
+/* Hero */
+
+.hero {
+    margin: auto;
+    height: 700px;
+    width: 100%;
+    background: url(/img/birmingham-museums-trust.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+.hero-content {
+    padding-top: 133px;
+    width: 40%;
+}
+
+.title__big {
+    font-size: 72px;
+    font-weight: 700;
+    color: white;
+}
+
+.description__white {
+font-size: 18px;
+color: white;
+}
