@@ -556,7 +556,8 @@ h2 {
 .swiper-slide {
     position: relative;
     height: 350px;
-    width: 350px;   
+    width: 350px;
+    box-sizing: border-box;   
 }
 .swiper-slide:focus {
     outline: 2px solid var(--outline);
