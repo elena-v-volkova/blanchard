@@ -54,9 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
         itemSelectText: '',
     });
 
-    // map
-    // Функция ymaps.ready() будет вызвана, когда
-    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
     ymaps.ready(init);
     function init() {
         // Создание карты.
@@ -66,18 +63,23 @@ document.addEventListener('DOMContentLoaded', function () {
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
             zoom: 14,
-            controls: ['smallZoomControl'],
-        });
+            controls: ['geolocationControl'],
+        },
+            {
+                // Зададим опции для элементов управления.
+                geolocationControlFloat: 'right',
+            }
 
+        );
         // Создание геообъекта с типом точка (метка).
         var myGeoObject = new ymaps.GeoObject({
             geometry: {
                 type: "Point", // тип геометрии - точка
-                coordinates: [55.75846306898368, 37.601079499999905] // координаты точки
+                coordinates: [55.75979150133848, 37.61026443960955] // координаты точки
             }
         });
 
-        var myPlacemark = new ymaps.Placemark([55.75846306898368, 37.601079499999905], {}, {
+        var myPlacemark = new ymaps.Placemark([55.75979150133848, 37.61026443960955], {}, {
             iconLayout: 'default#image',
             iconImageHref: '/img/mapsdot.svg',
             iconImageSize: [30, 42],
@@ -87,7 +89,20 @@ document.addEventListener('DOMContentLoaded', function () {
         // Размещение геообъекта на карте.
         // myMap.geoObjects.add(myGeoObject); 
         myMap.geoObjects.add(myPlacemark);
+
+
+        myMap.controls.add('zoomControl', {
+            size: 'small',
+            float: 'none',
+            position: {
+                bottom: '300px',
+                right: '10px'
+            }
+        });
+
+
     }
+
     // Form
     new JustValidate('.form', {
         colorWrong: '#FF5C00',
@@ -114,4 +129,24 @@ document.addEventListener('DOMContentLoaded', function () {
             tel: 'Укажите ваш телефон',
         },
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
